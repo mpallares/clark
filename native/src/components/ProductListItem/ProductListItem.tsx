@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 7,
     marginBottom: 50,
-    // minHeight: 400,
   },
   content: {
     marginTop: 10,

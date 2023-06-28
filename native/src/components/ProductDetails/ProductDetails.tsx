@@ -1,5 +1,5 @@
 import { View, Text, Image as Img, StyleSheet, Dimensions } from 'react-native';
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import { Product } from '../../utils/types';
 import { Rating } from 'react-native-ratings';
 import { Swiper } from '../Swiper/Swiper';
@@ -8,29 +8,8 @@ export interface ProductDetailsProps {
   product: Product;
 }
 export const ProductDetails: FC<ProductDetailsProps> = ({ product }) => {
-  const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
-
-  useEffect(() => {
-    Img.getSize(product.images[0], (width, height) => {
-      const screenWidth = Dimensions.get('screen').width;
-      const screenHeight = Dimensions.get('screen').height;
-      const scaleFactor = Math.min(screenWidth / width, screenHeight / height);
-      const scaledWidth = width * scaleFactor;
-      const scaledHeight = height * scaleFactor;
-      setImageSize({ width: scaledWidth, height: scaledHeight });
-    });
-  }, []);
   return (
     <View style={styles.container}>
-      {/* <Image
-        style={[styles.tinyLogo,{height:imageSize.height,width: imageSize.width}]}
-        source={{
-          uri: product.images[0],
-        }}
-        placeholder={blurhash}
-        contentFit="contain"
-        transition={1000}
-      /> */}
       <Swiper images={product.images} />
       <Text style={styles.title}>{product.title}</Text>
       <Rating startingValue={product.rating} readonly />
@@ -39,7 +18,6 @@ export const ProductDetails: FC<ProductDetailsProps> = ({ product }) => {
         <Text style={styles.price}>$ {product.price}</Text>
         <Text style={styles.price}>{product.brand}</Text>
       </View>
-
       <Text style={styles.description}>{product.description}</Text>
     </View>
   );

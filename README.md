@@ -6,14 +6,14 @@ The clark app queries the https://dummyjson.com/ API to display products and vie
 
 ## Tech Stack
 
-React, Typescript, Redux Toolkit, Jest, CSS, MockAPI
+React Native, Typescript, Redux Toolkit, Jest, CSS
 
 ## Run Locally
 
 Clone the project
 
 ```bash
-  git clone git@github.com:mpallares/fides-technology.git
+  git clone git@github.com:mpallares/clark.git
 ```
 
 Install dependencies native
