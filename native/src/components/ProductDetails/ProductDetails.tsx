@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   title: {
     marginTop: 20,
     marginBottom: 8,
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'center',
   },
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   },
   description: {
     width: '85%',
-    fontSize: 25,
+    fontSize: 20,
     alignContent: 'center',
     justifyContent: 'center',
     textAlign: 'center',
