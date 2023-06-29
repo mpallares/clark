@@ -17,5 +17,6 @@ describe('Testing react navigation', () => {
     });
     const search = screen.queryByPlaceholderText('Search...');
     expect(search).toBeTruthy();
+    console.log('test');
   });
 });
